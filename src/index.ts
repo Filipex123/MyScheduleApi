@@ -1,6 +1,7 @@
 import { ExpressInvesify } from './infra/express-inversify/ExpressInversify';
 export * from './controller/Example.controller';
 import { Mongoose } from './infra/mongoose/Mongoose';
+import * as dotenv from 'dotenv';
 
 function normalizePort(val: string) {
   const port = parseInt(val, 10);
@@ -16,14 +17,16 @@ function normalizePort(val: string) {
   return false;
 }
 
+dotenv.config();
+
 (async () => {
-  const mongoose = new Mongoose('connectionUrlHere');
+  const mongoose = new Mongoose(process.env.MONGO_CONNECTION_STRING || '');
 
   await mongoose.connect();
 
   const expressInversify = new ExpressInvesify();
 
-  const port = normalizePort('3001');
+  const port = normalizePort(process.env.PORT || '3001');
   expressInversify.application.listen(port);
 
   console.log(`Listening on ${port}`);
