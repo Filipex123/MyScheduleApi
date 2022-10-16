@@ -1,5 +1,5 @@
 export interface ExampleMongoRepositoryInterface {
-  findAll(): Promise<any>[];
+  findAll(): Promise<any[]>;
   create(object: any): any;
   delete(id: number): boolean;
   update(object: any): any;

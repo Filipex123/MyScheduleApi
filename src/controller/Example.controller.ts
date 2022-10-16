@@ -16,7 +16,7 @@ export default class PostController implements interfaces.Controller {
       const posts = await this.insertExampleUseCase.execute(req);
       res.status(200).json(posts);
     } catch (error) {
-      res.status(400).json('Deu certo porem errado');
+      res.status(400).json(`Error: ${error}`);
     }
   }
 }

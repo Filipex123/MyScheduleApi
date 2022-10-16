@@ -1,4 +1,5 @@
 import { injectable } from 'inversify';
+import UserModel from '../model/User.model';
 import { ExampleMongoRepositoryInterface } from '../interface/IExampleMongoRepository.interface';
 
 @injectable()
@@ -7,9 +8,10 @@ export class ExampleMongoRepositoryImpl implements ExampleMongoRepositoryInterfa
     console.log('Entrou no repository');
   }
 
-  findAll(): Promise<any>[] {
-    throw new Error('Method not implemented.');
+  async findAll(): Promise<any[]> {
+    return await UserModel.find().exec();
   }
+
   create() {
     throw new Error('Method not implemented.');
   }

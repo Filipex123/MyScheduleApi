@@ -14,7 +14,6 @@ export class InsertExampleUseCase implements IUseCase {
 
   execute(data: any): Promise<any> {
     console.log(data);
-    this.exampleMongoRepository.findAll();
-    throw new Error('Method not implemented.');
+    return this.exampleMongoRepository.findAll();
   }
 }
