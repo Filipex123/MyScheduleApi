@@ -11,6 +11,6 @@ const UserSchema = new Schema({
   },
 });
 
-const UserModel = mongoose.model('mySchedule.users', UserSchema);
+const UserModel = mongoose.model('users', UserSchema);
 
 export default UserModel;

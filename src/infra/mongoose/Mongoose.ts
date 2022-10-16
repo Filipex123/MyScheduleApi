@@ -11,7 +11,7 @@ export class Mongoose {
   }
 
   public async connect() {
-    let options: mongoose.ConnectOptions = {};
+    let options: mongoose.ConnectOptions = { dbName: 'mySchedule' };
 
     try {
       await mongoose.connect(this.url, options);
