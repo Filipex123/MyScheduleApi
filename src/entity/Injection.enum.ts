@@ -1,5 +1,5 @@
 export enum InjectionEnum {
   //Repository
-  ExampleMongoRepository = 'ExampleMongoRepository',
-  InsertExampleUseCase = 'InsertExampleUseCase',
+  UserRepositoryImpl = 'UserRepositoryImpl',
+  LogineUseCase = 'LogineUseCase',
 }

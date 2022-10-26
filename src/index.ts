@@ -1,5 +1,5 @@
 import { ExpressInvesify } from './infra/express-inversify/ExpressInversify';
-export * from './controller/Example.controller';
+export * from './controller/User.controller';
 import { Mongoose } from './infra/mongoose/Mongoose';
 import * as dotenv from 'dotenv';
 

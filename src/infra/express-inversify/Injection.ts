@@ -1,7 +1,7 @@
 import { InjectionEnum } from '../../entity/Injection.enum';
 import { Container, interfaces } from 'inversify';
-import { ExampleMongoRepositoryImpl } from '../../repository/implementation/ExampleMongoRepositoryImp';
-import { InsertExampleUseCase } from '../../usecase/InsertExample.usecase';
+import { UserRepositoryImpl } from '../../repository/UserRepositoryImpl';
+import { LogineUseCase } from '../../usecase/Login.usecase';
 
 export class Injection {
   public container: interfaces.Container;
@@ -12,9 +12,7 @@ export class Injection {
 
   private bindClass(): void {
     this.container = new Container();
-    this.container
-      .bind<ExampleMongoRepositoryImpl>(InjectionEnum.ExampleMongoRepository)
-      .to(ExampleMongoRepositoryImpl);
-    this.container.bind<InsertExampleUseCase>(InjectionEnum.InsertExampleUseCase).to(InsertExampleUseCase);
+    this.container.bind<UserRepositoryImpl>(InjectionEnum.UserRepositoryImpl).to(UserRepositoryImpl);
+    this.container.bind<LogineUseCase>(InjectionEnum.LogineUseCase).to(LogineUseCase);
   }
 }

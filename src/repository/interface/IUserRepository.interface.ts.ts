@@ -1,5 +1,5 @@
-export interface ExampleMongoRepositoryInterface {
-  findAll(): Promise<any[]>;
+export interface IUserRepository {
+  findByEmailAndPassword(email: string, password: string): Promise<boolean>;
   create(object: any): any;
   delete(id: number): boolean;
   update(object: any): any;

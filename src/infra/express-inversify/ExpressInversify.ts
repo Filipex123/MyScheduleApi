@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import express, { Application, json, urlencoded } from 'express';
+import { Application, json, urlencoded } from 'express';
 import helmet from 'helmet';
 import { interfaces } from 'inversify';
 import { InversifyExpressServer } from 'inversify-express-utils';
@@ -26,7 +26,6 @@ export class ExpressInvesify {
       app.use(helmet());
       app.use(compression());
       app.use(cors());
-      app.use(express.json());
       app.use(cookieParser());
     });
 

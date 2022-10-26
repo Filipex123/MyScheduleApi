@@ -1,15 +1,16 @@
 import { injectable } from 'inversify';
-import UserModel from '../model/User.model';
-import { ExampleMongoRepositoryInterface } from '../interface/IExampleMongoRepository.interface';
+import { IUserRepository } from './interface/IUserRepository.interface.ts';
+import UserModel from '../repository/model/User.model';
 
 @injectable()
-export class ExampleMongoRepositoryImpl implements ExampleMongoRepositoryInterface {
+export class UserRepositoryImpl implements IUserRepository {
   constructor() {
     console.log('Entrou no repository');
   }
 
-  async findAll(): Promise<any[]> {
-    return await UserModel.find().exec();
+  async findByEmailAndPassword(email: string, password: string): Promise<boolean> {
+    const user = await UserModel.findOne({ email: email, senha: password });
+    return !!user;
   }
 
   create() {

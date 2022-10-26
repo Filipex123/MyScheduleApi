@@ -9,6 +9,8 @@ const UserSchema = new Schema({
     cidade: { type: String },
     estado: { type: String },
   },
+  email: { type: String },
+  senha: { type: String },
 });
 
 const UserModel = mongoose.model('users', UserSchema);
