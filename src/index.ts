@@ -1,7 +1,9 @@
 import { ExpressInvesify } from './infra/express-inversify/ExpressInversify';
-export * from './controller/User.controller';
 import { Mongoose } from './infra/mongoose/Mongoose';
 import * as dotenv from 'dotenv';
+
+export * from './controller/User.controller';
+export * from './controller/Admin.controller';
 
 function normalizePort(val: string) {
   const port = parseInt(val, 10);
