@@ -1,7 +1,7 @@
 import { InjectionEnum } from '../entity/Injection.enum';
 import { injectable, inject } from 'inversify';
 import { IAdminLoginUseCase } from './interface/AdminLogin.usecase.interface';
-import { IAdminRepository } from 'repository/interface/IAdminRepository.interface';
+import { IAdminRepository } from '../repository/interface/IAdminRepository.interface';
 
 @injectable()
 export class AdminLoginUseCase implements IAdminLoginUseCase {

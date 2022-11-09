@@ -1,7 +1,7 @@
 import { InjectionEnum } from '../entity/Injection.enum';
 import { injectable, inject } from 'inversify';
 import { ILogineUseCase } from './interface/Login.usecase.interface';
-import { IUserRepository } from 'repository/interface/IUserRepository.interface.ts';
+import { IUserRepository } from '../repository/interface/IUserRepository.interface.ts';
 
 @injectable()
 export class LogineUseCase implements ILogineUseCase {
