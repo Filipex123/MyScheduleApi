@@ -4,6 +4,7 @@ import * as dotenv from 'dotenv';
 
 export * from './controller/User.controller';
 export * from './controller/Admin.controller';
+export * from './controller/Exam.controller'
 
 function normalizePort(val: string) {
   const port = parseInt(val, 10);

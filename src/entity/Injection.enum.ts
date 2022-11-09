@@ -2,6 +2,8 @@ export enum InjectionEnum {
   //Repository
   UserRepositoryImpl = 'UserRepositoryImpl',
   AdminRepositoryImpl = 'AdminRepositoryImpl',
+  ExamRepositoryImpl = 'ExamRepositoryImpl',
   LogineUseCase = 'LogineUseCase',
-  AdminLoginUseCase = 'AdminLoginUseCase'
+  AdminLoginUseCase = 'AdminLoginUseCase',
+  CreateExamUseCase = 'CreateExamUseCase'
 }
