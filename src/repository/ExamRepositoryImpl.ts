@@ -8,8 +8,45 @@ export class ExamRepositoryImpl implements IExamRepository {
     console.log('Entrou no repository');
   }
 
-  async create(name: string, completionDate: string): Promise<boolean> {
+  async create(name: string, completionDate: string) {
     const exam = await Exam.create({ nome: name, dataRealizacao: completionDate });
-    return !!exam;
+    return exam;
+  }
+
+  async findAll() {
+    const exams = await Exam.find();
+    return exams;
+  }
+
+  async addMatterToExam(examId: string, matterName: string) {
+    return await Exam.findOneAndUpdate(
+      { 
+        _id: examId
+      },
+      {
+        $push: { materias: { nome: matterName }}
+      }, 
+      {
+        new: true
+      }
+    )
+  }
+
+  async addSubjectToMatter(examId: string, matterId: string, subjectName: string) {
+    return await Exam.findOneAndUpdate(
+      {
+        _id: examId, "materias._id": matterId
+      }, 
+      {
+        $push: {
+          "materias.$.assuntos": {
+            nome: subjectName
+          }
+        }
+      },
+      {
+        new: true
+      }
+    )
   }
 }

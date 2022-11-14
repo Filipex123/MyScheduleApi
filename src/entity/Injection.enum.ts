@@ -5,5 +5,8 @@ export enum InjectionEnum {
   ExamRepositoryImpl = 'ExamRepositoryImpl',
   LogineUseCase = 'LogineUseCase',
   AdminLoginUseCase = 'AdminLoginUseCase',
-  CreateExamUseCase = 'CreateExamUseCase'
+  CreateExamUseCase = 'CreateExamUseCase',
+  GetAllExamsUseCase = 'GetAllExamsUseCase',
+  AddMatterToExamUseCase = 'AddMatterToExamUseCase',
+  AddSubjectToMatterUseCase = 'AddSubjectToMatterUseCase'
 }
