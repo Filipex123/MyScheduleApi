@@ -8,8 +8,8 @@ export class AdminRepositoryImpl implements IAdminRepository {
     console.log('Entrou no repository');
   }
 
-  async findByEmailAndPassword(email: string, password: string): Promise<boolean> {
+  async findByEmailAndPassword(email: string, password: string) {
     const user = await Admin.findOne({ email: email, senha: password });
-    return !!user;
+    return user;
   }
 }

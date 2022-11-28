@@ -12,7 +12,7 @@ export class AdminLoginUseCase implements IAdminLoginUseCase {
     console.log('Entrou no usecase');
   }
 
-  async execute(email: string, password: string): Promise<boolean> {
+  async execute(email: string, password: string) {
     return await this.adminRepository.findByEmailAndPassword(email, password);
   }
 }
