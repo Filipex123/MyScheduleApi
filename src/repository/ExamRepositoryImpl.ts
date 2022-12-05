@@ -13,6 +13,10 @@ export class ExamRepositoryImpl implements IExamRepository {
     return exam;
   }
 
+  async delete(examId: string) {
+    await Exam.deleteOne({ _id: examId });
+  }
+
   async findAll() {
     const exams = await Exam.find();
     return exams;

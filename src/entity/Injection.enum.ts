@@ -6,6 +6,7 @@ export enum InjectionEnum {
   LogineUseCase = 'LogineUseCase',
   AdminLoginUseCase = 'AdminLoginUseCase',
   CreateExamUseCase = 'CreateExamUseCase',
+  DeleteExamUseCase = 'DeleteExamUseCase',
   GetAllExamsUseCase = 'GetAllExamsUseCase',
   AddMatterToExamUseCase = 'AddMatterToExamUseCase',
   AddSubjectToMatterUseCase = 'AddSubjectToMatterUseCase'
