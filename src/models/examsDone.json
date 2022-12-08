@@ -1,0 +1,109 @@
+{
+  "nome": "FUVEST",
+  "dataRealizacao": "2022-12-17T15:00:00.000+00:00",
+  "materias": [
+    {
+      "nome": "Matemática",
+      "_id": "638e959f73b2bb2889c36cf5",
+      "assuntos": [
+        {
+          "nome": "Geometria Analítica e Plana",
+          "_id": "638e95df73b2bb2889c36d29"
+        },
+        {
+          "nome": "Trigonometria e suas funções",
+          "_id": "638e95e973b2bb2889c36d34"
+        },
+        {
+          "nome": "Funções de 1º, 2º e 3º graus",
+          "_id": "638e95f773b2bb2889c36d40"
+        },
+        {
+          "nome": "Progressão Geométrica e Aritmética",
+          "_id": "638e960673b2bb2889c36d4d"
+        }
+      ]
+    },
+    {
+      "nome": "Física",
+      "_id": "638e960673b2bb2889c36d4v",
+      "assuntos": [
+        {
+          "nome": "Leis de Newton",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Cinemática",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Estática",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Termodinâmica",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Circuitos elétricos",
+          "_id": "638e960673b2bb2889c36d4d"
+        }
+      ]
+    },
+    {
+      "nome": "Química",
+      "_id": "638e960673b2bb2889c3633k",
+
+      "assuntos": [
+        {
+          "nome": "Conceitos de Tabelo Periódica",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Cálculo Estequiométrico",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Reações de combustão",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Química Orgânica",
+          "_id": "638e960673b2bb2889c36d4d"
+        }
+      ]
+    },
+    {
+      "nome": "Biologia",
+      "_id": "638e960673b2bb2889c36221",
+
+      "assuntos": [
+        {
+          "nome": "Corpo humano e os seus sistemas",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Genética",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Ecologia",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Botânica",
+          "_id": "638e960673b2bb2889c36d4d"
+        },
+        {
+          "nome": "Estrutura celular",
+          "_id": "638e960673b2bb2889c36d4d"
+        }
+      ]
+    },
+    {
+      "nome": "Redação",
+      "_id": "638e960673b2bb2889c361n9",
+      "assuntos": []
+    }
+  ]
+}

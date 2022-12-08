@@ -11,6 +11,7 @@ import { GetAllExamsUseCase } from '../../usecase/GetAllExams.usecase';
 import { AddMatterToExamUseCase } from '../../usecase/AddMatterToExam.usecase';
 import { AddSubjectToMatterUseCase } from '../../usecase/AddSubjectToMatter.usecase';
 import { DeleteExamUseCase } from '../../usecase/DeleteExam.usecase';
+import { CheckUserExamUseCase } from '../../usecase/CheckUserExam.usecase';
 
 export class Injection {
   public container: interfaces.Container;
@@ -30,6 +31,9 @@ export class Injection {
     this.container.bind<DeleteExamUseCase>(InjectionEnum.DeleteExamUseCase).to(DeleteExamUseCase);
     this.container.bind<GetAllExamsUseCase>(InjectionEnum.GetAllExamsUseCase).to(GetAllExamsUseCase);
     this.container.bind<AddMatterToExamUseCase>(InjectionEnum.AddMatterToExamUseCase).to(AddMatterToExamUseCase);
-    this.container.bind<AddSubjectToMatterUseCase>(InjectionEnum.AddSubjectToMatterUseCase).to(AddSubjectToMatterUseCase);
+    this.container
+      .bind<AddSubjectToMatterUseCase>(InjectionEnum.AddSubjectToMatterUseCase)
+      .to(AddSubjectToMatterUseCase);
+    this.container.bind<CheckUserExamUseCase>(InjectionEnum.CheckUserExamUseCase).to(CheckUserExamUseCase);
   }
 }
